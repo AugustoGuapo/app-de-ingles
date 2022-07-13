@@ -14,13 +14,13 @@ import javax.swing.JPanel;
  *
  * @author Hewlett Packard
  */
-public class ventandeinicio extends javax.swing.JFrame {
+public class topic2 extends javax.swing.JFrame {
 
     fondopanel fondo = new fondopanel();
     
-    public ventandeinicio() {
+    public topic2() {
         initComponents();
-        
+        agregar_texto();
     }
 
     /**
@@ -33,32 +33,37 @@ public class ventandeinicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new fondopanel();
-        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton2.setText("Start");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("PT Sans", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("chronological classification of robots ");
+
+        jTextPane1.setContentType("text/html"); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(401, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(357, 357, 357))
+                .addContainerGap(240, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(181, 181, 181))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(347, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(228, 228, 228))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -75,12 +80,18 @@ public class ventandeinicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        this.setVisible(false);
-        new VentanaPrincipal().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
+    public void agregar_texto()
+        {
+            jTextPane1.setText("First generation\n" +
+"A first-generation robot is a simple mechanical arm. These machines have the ability to make precise motions at high speed, many times, for a long time. Such robots find widespread industrial use today.\n" +
+"Second generation\n" +
+"A second-generation robot has rudimentary machine intelligence. Such a robot is equipped with sensors that tell it things about the outside world. These devices include pressure sensors, proximity sensors, tactile sensors, radar, sonar, ladar, and vision systems. A controller processes the data from these sensors and adjusts the operation of the robot accordingly.\n" +
+"Third generation\n" +
+"The concept of a third-generation robot encompasses two major avenues of evolving smart robot technology: the autonomous robot and the insect robot. An autonomous robot can work on its own. It contains a controller, and it can do things largely without supervision.\n" +
+"There are some situations in which autonomous robots do not perform efficiently. In these cases, a fleet of simple insect robots, all under the control of one central computer, can be used. These machines work like ants in an anthill, or like bees in a hive.\n" +
+"Fourth generation and beyond\n" +
+"Any robot of a sort yet to be seriously put into operation is a fourth generation robot. Examples of these might be robots that reproduce and evolve, or that incorporate biological as well as mechanical components. Past that, we might say that a fifth-generation robot is something no one has yet designed or conceived.");
+        }
     /**
      * @param args the command line arguments
      */
@@ -98,27 +109,30 @@ public class ventandeinicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ventandeinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(topic2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ventandeinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(topic2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ventandeinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(topic2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ventandeinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(topic2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
+        
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ventandeinicio().setVisible(true);
+                new topic2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 
     class fondopanel extends JPanel
@@ -128,7 +142,7 @@ public class ventandeinicio extends javax.swing.JFrame {
         @Override
         public void paint (Graphics g)
         {
-            imagen = new ImageIcon(getClass().getResource("/imagenes/imagenfondo.png")).getImage();
+            imagen = new ImageIcon(getClass().getResource("/imagenes/circuitos.png")).getImage();
             g.drawImage(imagen,0,0, getWidth(),getHeight(),this);
             
             setOpaque(false);
