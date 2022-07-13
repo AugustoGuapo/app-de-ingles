@@ -15,7 +15,8 @@ public class AppDeIngles {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new VentanaPrincipal().setVisible(true);
+        
+        new ventandeinicio().setVisible(true);
     }
     
 }
